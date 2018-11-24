@@ -1,3 +1,4 @@
 includes:
   - 'layer:basic'
   - 'layer:apt'
+repo: 'https://github.com/ChrisMacNaughton/charm-remote-nfs.git'
