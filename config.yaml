@@ -1,0 +1,13 @@
+options:
+  nfs-server:
+    type: string
+    default:
+    description: The remote NFS server's IP address/hostname
+  nfs-target:
+    type: string
+    default:
+    description: The path on the remote NFS server
+  local-target:
+    type: string
+    default:
+    description: Where to mount the NFS path on the local unit

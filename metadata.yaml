@@ -1,0 +1,19 @@
+name: remote-nfs
+summary: Mount a remote NFS share onto a charm
+maintainer: chris <chris@centauri.solutions>
+description: |
+  Mounts an NFS share from a non-Juju share onto a unit
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+series:
+  - cosmic
+  - bionic
+  - xenial
+  - trusty
+subordinate: true
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
