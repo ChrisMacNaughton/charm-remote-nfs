@@ -55,6 +55,9 @@ def setup_mount():
         "nfs",
         options="auto,nofail,noatime,nolock,intr,tcp,actimeo=1800"
         )
-    host.mkdir(new_path)
+    try:
+        host.mkdir(new_path)
+    except PermissionError:
+        pass
     host.fstab_mount(new_path)
     hookenv.status_set('active', "{}:{} -> {}".format(new_server, new_target, new_path))
