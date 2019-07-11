@@ -53,7 +53,7 @@ def setup_mount():
         "{}:{}".format(new_server, new_target),
         new_path,
         "nfs",
-        options="auto,nofail,noatime,nolock,intr,tcp,actimeo=1800"
+        options=config.get('mount-options')
         )
     try:
         host.mkdir(new_path)
